@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "ebe0ecdc-01c0-4cbe-ad5d-d1bec01c46b5",
+		"name": "Masiv_Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22877776"
+	},
+	"item": [
+		{
+			"name": "Register - Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/clients?name=name&lastName=last name&email=admin@admin.com&password=password.admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clients"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "name"
+						},
+						{
+							"key": "lastName",
+							"value": "last name"
+						},
+						{
+							"key": "email",
+							"value": "admin@admin.com"
+						},
+						{
+							"key": "password",
+							"value": "password.admin"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register - User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/clients?name=name&lastName=last name&email=user@gmail.com&password=password.user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clients"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "name"
+						},
+						{
+							"key": "lastName",
+							"value": "last name"
+						},
+						{
+							"key": "email",
+							"value": "user@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "password.user"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login - Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/login?email=admin@admin.com&password=password.admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "admin@admin.com"
+						},
+						{
+							"key": "password",
+							"value": "password.admin"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login - User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/login?email=user@gmail.com&password=password.user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "user@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "password.user"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create comunication - Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/comunication/admin?title=Comunicado 1 - Enero 2023&content=Bienvenido a la primera comunicación empresarial que tiene Masiv para sus clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"comunication",
+						"admin"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Comunicado 1 - Enero 2023"
+						},
+						{
+							"key": "content",
+							"value": "Bienvenido a la primera comunicación empresarial que tiene Masiv para sus clientes"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Communications directory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/comunications",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"comunications"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

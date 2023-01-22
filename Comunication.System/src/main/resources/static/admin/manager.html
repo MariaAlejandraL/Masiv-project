@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/admin/manager.css">
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <title>Masiv Comunications</title>
+  </head>
+  <body>
+    <div id="app">
+    <header>
+      <div class="nav-account">
+        <h1>Masiv</h1>
+        <nav>
+          <ul>
+            <li>
+              <button class="login-button register" @click="logout">
+                Logout
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="central-section" class="inner dashboard">
+    
+        <div id="dashboard-text">
+          <span>
+            <h2 class="dashboard-text-element">
+              Welcome to Admin Role 
+            </h2>
+          </span>
+        </div>
+        <div id="dashboard-table"> 
+          <div class="dashboard-table-content">
+            <div class="dashboard-table-content-resumen">
+              <div class="tables">
+                <table >
+                  <form v-on:submit.prevent class="table-transfer">
+                    <span  class="tbody-title"> New Comunication</span>
+                     <tr class="loan-application">
+                       <td>
+                        Assign Comunication Title
+                        <input class="input-create-loan" type="text"  v-model="newTitle">
+                       </td>
+                       <td>
+                        Assign Comunication Content
+                        <input class="input-create-loan" type="text"  v-model="newContent">
+                       </td>
+                     </tr>
+                        <tr>
+                       <td>
+                        <a class="new-loan-button" @click="createComunication"> Create </a>
+                       </td>
+                     </tr>
+                     <div>
+                      
+                     </div>
+                    </form>
+                    <tbody class="admin-loans">
+                      <tr v-for="comunication in comunications">
+                        <td class="td-subtitle">{{comunication.title}}</td>
+                        <td>
+                          <span class="table-text"> ✏️ </span>
+                            {{comunication.content}}
+                        </td>
+                      </tr>
+                    </tbody>
+                    
+                </table>
+             <p>please reload the page</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    </section>
+  </div>
+   
+    <!--Scripts-->
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/admin/create-comunication.js"></script>
+  </body>
+</html>

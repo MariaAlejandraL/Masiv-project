@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="stylesheet" href="/style/comunications.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <title>Masiv Comunications</title>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <header>
+        <div class="nav-account">
+          <h1>Masiv</h1>
+          <nav>
+            <ul>
+              <li>
+                <button class="login-button register" @click="logout">
+                  Logout
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <section id="central-section" class="inner dashboard">
+        <div id="dashboard-main">
+          <div id="dashboard-text">
+            <span>
+              <h2 class="dashboard-text-element">
+                Welcome👋😃, {{clients.name + " " + clients.lastName}} , these are today's business communications 
+              </h2>
+            </span>
+          </div>
+          <div id="dashboard-table">
+          
+          
+            <div class="dashboard-table-content">
+              <div class="dashboard-table-content-resumen">
+                <div class="side-menu">
+                  <ul class="side-menu-ul">
+                    <li><i class="uil uil-resume-b uil-user-check"></i></li>
+                  </ul>
+                </div>
+                <div class="tables">
+                  <table v-for="comunication in comunications">
+                    <tbody class="tbody-2">
+                      <span class="tbody-title"> ✅ Business communications</span>
+                      <tr>
+                        <td class="td-subtitle">
+                          <span class="table-text"></span> 📌 {{comunication.title}}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="td-subtitle">
+                          <span class="table-text"></span> {{comunication.content}}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+           
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!--Scripts-->
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/script/comunications.js"></script>
+  </body>
+</html>
